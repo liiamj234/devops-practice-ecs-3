@@ -15,6 +15,10 @@ router = APIRouter()
 # - Keep /health only in app/core.py.
 # ============================================================
 
+@router.get("/items")
+def items():
+    return {"items": ["keyboard", "monitor", "docker"]}
+
 @router.get("/portfolio")
 def portfolio_placeholder():
     return {
